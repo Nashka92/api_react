@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
 import Search from "../components/Search";
 
 const Menu = () => {
+  const [recherche, setRecherche] = useState("");
   return (
     <>
       <Navbar bg="light" expand="lg">
@@ -25,9 +27,9 @@ const Menu = () => {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
-                onChange={Search}
+                onChange={e => setRecherche (e.target.value)}
               />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="outline-success" onClick={()=>{Search(recherche)}}>Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
