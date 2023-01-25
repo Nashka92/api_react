@@ -7,9 +7,9 @@ const Menu = () => {
   const [recherche, setRecherche] = useState("");
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="info" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="/">Navbar scroll</Navbar.Brand>
+          <Navbar.Brand href="/">TP React API DB Movie</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -18,18 +18,18 @@ const Menu = () => {
               navbarScroll
             >
               <Nav.Link href="/">Accueil</Nav.Link>
-              <Nav.Link href="/page2">Page 2</Nav.Link>
-              <Nav.Link href="/page3">Page 3</Nav.Link>
+              <Nav.Link href="/page1">Page 1 |</Nav.Link>
+              <Nav.Link href="/page2">Page 2 |</Nav.Link>
+              <Nav.Link href="/page3">Page 3 |</Nav.Link>
             </Nav>
             <Form className="d-flex">
               <Form.Control
                 type="search"
-                placeholder="Search"
                 className="me-2"
                 aria-label="Search"
                 onChange={e => setRecherche (e.target.value)}
               />
-              <Button variant="outline-success" onClick={()=>{Search(recherche)}}>Search</Button>
+              <Button variant="primary" onClick={()=>{Search(recherche)}}>Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>

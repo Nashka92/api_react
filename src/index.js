@@ -11,6 +11,7 @@ import Page4 from "./pages/Page4";
 import Accueil from "./pages/Accueil";
 import PageNotFound from "./pages/PageNotFound";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/App.css'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
